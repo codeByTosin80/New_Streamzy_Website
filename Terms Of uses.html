@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Streamzy</title>
+    <link rel="stylesheet" href="Terms Of uses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="STREAMZY_Logo-1.png" alt="">
+                <p>Help center</p>
+            </div>
+            <div class="user">
+                <div class="name" id="name">
+                    <a href="" id="userName"></a>
+                    <i class="fa-solid fa-square-caret-down"></i>
+                </div>
+                <div class="info" id="info">
+                    <a href="home.html"><i class="fas fa-arrow-left"></i>Back to STREAMZY</a>
+                    <a href="Account.html"><i class="fas fa-user"></i>Account</a>
+                    <hr>
+                    <a href="Sign In.html">Sign out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="terms-container">
+        <h1>Streamzy Terms of Use</h1>
+        <p><strong>Effective Date:</strong> June 27, 2025</p>
+        <p>Welcome to Streamzy! These Terms of Use explain the rules for using this website. By using the website, you agree to follow these rules.</p>
+        
+        <h2>1. What Streamzy Is</h2>
+        <p>Streamzy is a website where you can watch and download movies, TV shows, and more on your phone, laptop, or other devices. It works when you sign up and choose a plan. It is made to make entertainment easy for everyone.</p>
+        
+        <h2>2. Who Can Use It</h2>
+        <p>You must be at least 13 years old to use Streamzy. If you are below 18, use the site with a parent or guardian. All details you enter must be correct and real.</p>
+        
+        <h2>3. Your Account</h2>
+        <ul>
+          <li>You must create an account to use Streamzy.</li>
+          <li>You are in charge of your account and password.</li>
+          <li>Don't share your account with people you don't trust.</li>
+        </ul>
+        
+        <h2>4. Subscriptions</h2>
+        <ul>
+          <li>Streamzy plans cost ₦2,500 to ₦8,000 per month.</li>
+          <li>Your plan continues every month unless you cancel it.</li>
+          <li>You can cancel anytime from your account page.</li>
+        </ul>
+        
+        <h2>5. Watching and Downloading</h2>
+        <ul>
+          <li>After subscribing, you can watch and download movies and shows.</li>
+          <li>You are free to share downloaded content with others, but don't sell or misuse it.</li>
+          <li>Some shows are for kids. Parents should guide what their kids watch.</li>
+        </ul>
+        
+        <h2>6. Content and Devices</h2>
+        <p>Movies and shows can change anytime. Some might not work on all devices. Use a good internet connection for better streaming.</p>
+        
+        <h2>7. Ending Your Account</h2>
+        <p>If you break the rules, Streamzy can remove or block your account. You can also stop using it anytime by logging out or deleting your account.</p>
+        
+       
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns about these Terms of Use, please contact us at <strong><a href="Question.html">support@streamzy.com </a></strong>.
+        </p>
+        <p>Thanks for using Streamzy!</p>
+        <footer>
+            <p>&copy; 2025 Streamzy. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+
+    <script>
+        document.getElementById('info').style.display = 'none';
+
+        // Show #info when #name is clicked
+        document.getElementById('name').addEventListener('click', function(event) {
+            event.preventDefault();
+            const info = document.getElementById('info');
+            // Toggle display
+            if (info.style.display === 'flex') {
+                info.style.display = 'none';
+            } else {
+                info.style.display = 'flex';
+            }
+
+        });
+
+        // Hide #info when clicking outside of #info or #name
+        document.addEventListener('click', function(event) {
+            const info = document.getElementById('info');
+            const nameBtn = document.getElementById('name');
+            if (
+                info.style.display === 'flex' &&
+                !info.contains(event.target) &&
+                !nameBtn.contains(event.target)
+            ) {
+                info.style.display = 'none';
+            }
+        });
+        const name = localStorage.getItem("userName");
+        const userName = document.getElementById("userName");
+        userName.textContent = `${name}`
+    </script>
+</body>
+
+</html>
